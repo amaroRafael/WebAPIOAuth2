@@ -1,21 +1,46 @@
-## Lumen PHP Framework
+# PHP OAuth 2.0 Server for Lumen
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[OAuth 2.0](http://tools.ietf.org/wg/oauth/draft-ietf-oauth-v2/) authorization server and resource server for the Laravel framework. 
+Standard compliant thanks to the amazing work by [The League of Extraordinary Packages](http://www.thephpleague.com) OAuth 2.0 authorization server and resource server.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+The package assumes you have a good-enough knowledge of the principles behind the [OAuth 2.0 Specification](http://tools.ietf.org/html/rfc6749).
 
-## Official Documentation
+## Version Compability
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+ Lumen    | OAuth Server | PHP
+:---------|:-------------|:----
+ 5.0.x    | 4.1.x        |>= 5.5
 
-## Security Vulnerabilities
+## Documentation
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+This package features an [extensive wiki](https://github.com/amaroRafael/WebAPIOAuth2/wiki) to help you getting started implementing an OAuth 2.0 Server in your Laravel app.
 
-### License
+## Support
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Bugs and feature request are tracked on [GitHub](https://github.com/amaroRafael/WebAPIOAuth2/issues)
+
+## License
+
+This package is released under [the MIT License](LICENSE).
+
+## Credits
+
+#The code on which this package are based:
+
+ - [Oauth2 server Lumen](https://github.com/amaroRafael/oauth2server-lumen), is principally developed and maintained by [Rafael Luis Neves Amaro](https://br.linkedin.com/in/rafamaro).
+
+### OAuth2Server-Lumen
+
+PHP OAuth 2.0 Server for Lumen
+
+## Installation
+
+### Via composer
+
+Run ```composer require 'rapiro/oauth2server-lumen:0.1.*'```
+
+### Migrate
+
+In ```bootstrap/app.php``` file and uncomment ```$app->withFacades();``` and ```$app->withEloquent();```
+
+Run ```php artisan migrate --path=vendor/Rapiro/oauth2server-lumen/database/migrations```

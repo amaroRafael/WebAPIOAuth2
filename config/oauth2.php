@@ -46,7 +46,7 @@ return [
                     return false;
                 }
             },
-            'access_token_ttl' => 1000
+            'access_token_ttl' => 3600
         ],
         'refresh_token' => [
             'class' => '\League\OAuth2\Server\Grant\RefreshTokenGrant',

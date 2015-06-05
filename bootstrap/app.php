@@ -70,15 +70,15 @@ $app->singleton(
 // ]);
 
 $app->middleware([
-    'App\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware',
+    'Rapiro\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware',
     'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse'
 ]);
 
 $app->routeMiddleware([
-    'check-authorization-params' => 'App\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware',
+    'check-authorization-params' => 'Rapiro\OAuth2Server\Middleware\CheckAuthCodeRequestMiddleware',
     'csrf' => 'Laravel\Lumen\Http\Middleware\VerifyCsrfToken',
-    'oauth' => 'App\OAuth2Server\Middleware\OAuthMiddleware',
-    'oauth-owner' => 'App\OAuth2Server\Middleware\OAuthOwnerMiddleware'
+    'oauth' => 'Rapiro\OAuth2Server\Middleware\OAuthMiddleware',
+    'oauth-owner' => 'Rapiro\OAuth2Server\Middleware\OAuthOwnerMiddleware'
 ]);
 
 /*
@@ -93,8 +93,8 @@ $app->routeMiddleware([
 */
 
 // $app->register('App\Providers\AppServiceProvider');
-$app->register('App\OAuth2Server\Providers\StorageServiceProvider');
-$app->register('App\OAuth2Server\Providers\OAuth2ServerServiceProvider');
+$app->register('Rapiro\OAuth2Server\Providers\StorageServiceProvider');
+$app->register('Rapiro\OAuth2Server\Providers\OAuth2ServerServiceProvider');
 
 /*
 |--------------------------------------------------------------------------
