@@ -5,13 +5,14 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "laravel/lumen-framework": "5.0.*",
+        "laravel/lumen-framework": "5.1.*",
         "vlucas/phpdotenv": "~1.0",
         "league/oauth2-server": "^4.1",
         "rapiro/oauth2server-lumen": "0.1.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "~4.0",
+        "fzaninotto/faker": "~1.0"
     },
     "autoload": {
         "psr-4": {

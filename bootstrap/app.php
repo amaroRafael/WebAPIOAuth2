@@ -70,6 +70,8 @@ $app->singleton(
 // ]);
 
 $app->middleware([
+    'Illuminate\Session\Middleware\StartSession',
+    'Illuminate\View\Middleware\ShareErrorsFromSession',
     'Rapiro\OAuth2Server\Middleware\OAuthExceptionHandlerMiddleware',
     'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse'
 ]);
