@@ -24,6 +24,7 @@ $app->withFacades();
 $app->withEloquent();
 
 $app->configure('secrets');
+$app->configure('app');
 
 /*
 |--------------------------------------------------------------------------

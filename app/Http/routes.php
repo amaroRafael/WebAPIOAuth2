@@ -11,24 +11,23 @@
 |
 */
 
-$app->get('/', function() use ($app) {
-    return $app->welcome();
-});
+//$app->get('/', function() use ($app) {
+//    return $app->welcome();
+//});
 
-/*
 $app->get('/', function() use ($app) {
     return view()->make('client');
 });
 
-$app->post('login', function() use($app) {
-    $credentials = app()->make('request')->input("credentials");
-    return $app->make('App\Auth\Proxy')->attemptLogin($credentials);
-});
+$app->post('login', ['uses' => 'App\Http\Controllers\ProxyController@login']);//function() use($app) {
+//    $credentials = request()->input('credentials');
+//    return response()->make($credentials);
+//    return $app->make('App\Http\OAuth\Proxy')->attemptLogin($credentials);
+//});
 
 $app->post('refresh-token', function() use($app) {
-    return $app->make('App\Auth\Proxy')->attemptRefresh();
+    return $app->make('App\Http\OAuth\Proxy')->attemptRefresh();
 });
-*/
 
 $app->post('oauth/access-token', function() use($app) {
     return response()->json($app->make('oauth2-server.authorizer')->issueAccessToken());
